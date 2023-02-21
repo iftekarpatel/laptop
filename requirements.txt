@@ -3,4 +3,4 @@ pandas
 numpy 
 pickle5
 scikit-learn
-python==3.7
+
