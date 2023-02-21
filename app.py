@@ -84,10 +84,13 @@ if st.button('Predict Price'):
 
     ppi = ((X_resolution**2)+(Y_resolution**2))**0.5/(screen_size)
 
-    query = np.array([company, type, ram, os, weight,
-                      touchscreen, ips, ppi, cpu, hdd, ssd, gpu])
+    #query = np.array([company, type, ram, os, weight,
+                      #touchscreen, ips, ppi, cpu, hdd, ssd, gpu])
 
-    query = query.reshape(1, 12)
+    query = pd.get_dummies(np.array([company, type, ram, os, weight,
+                      touchscreen, ips, ppi, cpu, hdd, ssd, gpu])).reshape(1, 12)
+    
+
 
     prediction = int(np.exp(rf.predict(query)[0]))
 
