@@ -88,7 +88,8 @@ if st.button('Predict Price'):
                       #touchscreen, ips, ppi, cpu, hdd, ssd, gpu])
 
     query = pd.get_dummies(np.array([company, type, ram, os, weight,
-                      touchscreen, ips, ppi, cpu, hdd, ssd, gpu])).reshape(1, 12)
+                      touchscreen, ips, ppi, cpu, hdd, ssd, gpu]))
+    query = np.array(query).reshape(1, 12)
     
 
 
