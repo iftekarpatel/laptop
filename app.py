@@ -13,7 +13,7 @@ data = pd.read_csv("traineddata.csv")
 
 data['IPS'].unique()
 
-st.title("Laptop Price Predictor1")
+st.title("Laptop Price Predictor")
 
 company = st.selectbox('Brand', data['Company'].unique())
 
